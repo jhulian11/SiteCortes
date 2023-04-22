@@ -1,3 +1,10 @@
+body {
+  font-family: "Bebas Neue", cursive;
+}
+
+.font-inter {
+  font-family: "Inter", sans-serif !important;
+}
 .bg-principal {
   background-color: #15052c;
 }
@@ -18,16 +25,51 @@ a .bi:hover {
   color: #2cd524 !important;
 }
 
-.btn-radiativo {
+.btn-secondary-dark {
+  color: white !important;
+  background: rgba(235, 153, 36, 0.6) !important;
+}
+.btn-secondary-dark:hover {
+  color: white !important;
+  background: rgba(235, 153, 36, 1) !important;
+}
+
+.btn-secondary {
+  color: white !important;
+  background: rgba(235, 153, 36, 1) !important;
+}
+
+.btn-radiotivo {
   background-color: #2cd524;
   color: white;
 }
-
+.btn-radiotivo:hover {
+  background-color: white;
+  color: #2cd524 !important;
+}
+.py-7 {
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
+}
 h1,
 h2,
 h3,
-p,
+h4, p,
 a {
   color: white !important;
   text-decoration: none;
+}
+
+@media (min-width: 700px) {
+  #section-home {
+    background-image: url("imgs/bgSection.png");
+    background-repeat: no-repeat;
+    background-size: 50% 100%;
+    background-position: right;
+  }
+
+  .py-7 {
+    padding-top: 6rem !important;
+    padding-bottom: 6rem !important;
+  }
 }
