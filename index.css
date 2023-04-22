@@ -1,0 +1,33 @@
+.bg-principal {
+  background-color: #15052c;
+}
+
+.bg-secundaria {
+  background-color: #2b2a05;
+}
+
+.underline-link:hover {
+  text-decoration: underline;
+}
+
+.btn-outline-light:hover {
+  color: #2cd524 !important;
+}
+
+a .bi:hover {
+  color: #2cd524 !important;
+}
+
+.btn-radiativo {
+  background-color: #2cd524;
+  color: white;
+}
+
+h1,
+h2,
+h3,
+p,
+a {
+  color: white !important;
+  text-decoration: none;
+}
