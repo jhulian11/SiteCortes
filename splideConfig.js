@@ -10,10 +10,14 @@ const splideConfig = function () {
     gap: "3rem",
     breakpoints: {
       mediaQuery: "min",
-      750: {
+      1050: {
         type: "loop",
         perPage: 1,
         arrows: true,
+        destroy:false
+      },
+      4000: {
+        destroy: true,
       },
     },
   };

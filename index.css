@@ -13,6 +13,10 @@ a {
   text-decoration: none;
 }
 
+textarea {
+  resize: none;
+}
+
 /* font */
 .font-inter {
   font-family: "Inter", sans-serif !important;
@@ -28,6 +32,10 @@ a {
 
 .bg-secundaria {
   background-color: #2b2a05;
+}
+
+.bg-grey {
+  background: rgba(217, 217, 217, 1);
 }
 
 .btn-outline-light:hover {
@@ -91,14 +99,16 @@ a {
 }
 
 /* section-form-email */
-#section-form-email {
-  padding-top: 400px;
-  padding-bottom: 400px;
-  background-image: url("imgs/cardForm.png");
+
+#form-container {
+  background-image: url("imgs/cartao\ separado-edit.png");
   background-repeat: no-repeat;
-  background-size: 100% 80%;
-  background-position-x: start;
-  background-position-y: bottom;
+  background-size: 98% 75%;
+  background-position-x: center;
+  background-position-y: center;
+
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 /* utilidades */
@@ -113,7 +123,24 @@ a {
   text-decoration: underline;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 700px) {
+  /* section-home */
+  #section-home {
+    background-image: url("imgs/bgSection.png");
+    background-repeat: no-repeat;
+    background-size: 50% 100%;
+    background-position: right;
+  }
+
+  #section-home .container {
+    padding-top: 6rem !important;
+    padding-bottom: 6rem !important;
+  }
+
+  /* section-populares-parceiros */
+}
+
+@media (min-width: 992px) {
   /* section-home */
 
   #section-home {
@@ -133,8 +160,32 @@ a {
     top: -150px;
   }
 
+  /* section-ultimos-episodios */
+
+  #section-ultimos-episodios {
+    padding-bottom: 500px !important;
+  }
   /* section-form-email */
+
   #section-form-email {
+    margin-bottom: -400px;
+  }
+
+  #form-container {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+
+    background-image: none;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .translate-form-position {
+    transform: translateY(-400px);
+  }
+
+  /* #section-form-email {
     padding-top: 400px;
     padding-bottom: 400px;
     background-image: url("imgs/cardForm.png");
@@ -142,22 +193,46 @@ a {
     background-size: 60% 100%;
     background-position-x: center;
     background-position-y: bottom;
+  } */
+}
+@media (min-width: 994px) {
+  #form-container {
+    position: absolute;
+    top: 2%;
+    left: 50%;
+
+    background-image: none;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 
-@media (min-width: 700px) {
-  /* section-home */
-  #section-home {
-    background-image: url("imgs/bgSection.png");
-    background-repeat: no-repeat;
-    background-size: 50% 100%;
-    background-position: right;
+@media (min-width: 1050px) {
+  .splide-destroyed-flex {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 60px !important;
   }
 
-  #section-home .container {
-    padding-top: 6rem !important;
-    padding-bottom: 6rem !important;
-  }
+  #form-container {
+    position: absolute;
+    top: 2%;
+    left: 50%;
 
-  /* section-populares-parceiros */
+    background-image: none;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  #form-container {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+
+    background-image: none;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
