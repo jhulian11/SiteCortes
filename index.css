@@ -1,3 +1,13 @@
+:root {
+  --verde-radiotivo: #2cd524;
+  --verde-radiotivo-escuro: #1b5518;
+  --roxo-escuro: #15052c;
+  --cinza-claro: #d9d9d9;
+  --amarelo: #eb9924;
+  --amarelo-escuro: #eb992499;
+  --amarelo-claro: #efe9d7;
+}
+
 /* configs padrao */
 body {
   font-family: "Bebas Neue", cursive;
@@ -23,11 +33,16 @@ textarea {
 }
 
 /* bootstrap */
+
+.text-radiotivo {
+  color: var(--verde-radiotivo);
+}
+
 .bg-principal {
-  background-color: #15052c;
+  background-color: var(--roxo-escuro);
 }
 .bg-principal {
-  background-color: #15052c;
+  background-color: var(--roxo-escuro);
 }
 
 .bg-secundaria {
@@ -39,39 +54,39 @@ textarea {
 }
 
 .btn-outline-light:hover {
-  color: #2cd524 !important;
+  color: var(--verde-radiotivo) !important;
 }
 
 .btn-secondary-dark {
   color: white !important;
-  background: rgba(235, 153, 36, 0.6) !important;
+  background: var(--amarelo-escuro) !important;
 }
 .btn-secondary-dark:hover {
   color: white !important;
-  background: rgba(235, 153, 36, 1) !important;
+  background: var(--amarelo) !important;
 }
 
 .btn-secondary {
   color: white !important;
-  background: rgba(235, 153, 36, 1) !important;
-  border-color: rgba(235, 153, 36, 0.6);
+  background: var(--amarelo) !important;
+  border-color: var(--amarelo-escuro);
 }
 .btn-secondary:hover {
   color: white !important;
-  background: #15052c !important;
-  border-color: #15052c;
+  background: var(--roxo-escuro) !important;
+  border-color: var(--roxo-escuro);
 }
 .fs-7 {
   font-size: 14px;
 }
 .btn-radiotivo {
-  background-color: #2cd524;
+  background-color: var(--verde-radiotivo);
   color: white;
 }
 
 .btn-radiotivo:hover {
   background-color: white;
-  color: #15052c !important;
+  color: var(--roxo-escuro) !important;
 }
 
 /* section-home */
@@ -84,18 +99,24 @@ textarea {
 /* section-populares-parceiros */
 
 #parceiros {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  background-image: url("imgs/cartao\ separado-edit.png");
+  background-repeat: no-repeat;
+  background-size: 98% 75%;
+  background-position-x: center;
+  background-position-y: center;
+  padding-top: 120px;
+  padding-bottom: 38px;
 }
+
 .cards-episodios {
   position: static;
 }
 /* section-ultimos-episodios */
 .icon-play {
-  color: #2cd524 !important;
+  color: var(--verde-radiotivo) !important;
 }
 .icon-play:hover {
-  color: #1b5518 !important;
+  color: var(--verde-radiotivo-escuro) !important;
 }
 
 /* section-form-email */
@@ -113,15 +134,22 @@ textarea {
 
 /* utilidades */
 .icon-hover-radiotivo:hover {
-  color: #2cd524 !important;
+  color: var(--verde-radiotivo) !important;
 }
 .card-fundo-amarelo-claro {
-  background: rgba(239, 233, 215, 1);
+  background: var(--amarelo-claro);
 }
 
 .underline-link:hover {
   text-decoration: underline;
 }
+
+#parceiros-card {
+  margin-bottom: 80px;
+  margin-top: -52px;
+  padding-left: 22px;
+}
+/* Breakpoints */
 
 @media (min-width: 700px) {
   /* section-home */
@@ -138,6 +166,12 @@ textarea {
   }
 
   /* section-populares-parceiros */
+
+  #parceiros-card {
+    margin-bottom: 70px;
+    margin-top: -52px;
+    padding-left: 32px;
+  }
 }
 
 @media (min-width: 992px) {
@@ -148,22 +182,33 @@ textarea {
   }
 
   /* section-populares-parceiros */
-  #section-populares-parceiros {
-    background-image: url("imgs/cardParceiros.png");
-    background-repeat: no-repeat;
-    background-size: 90% 400px;
-    background-position-x: right;
-    background-position-y: center;
-  }
+
   .cards-episodios {
     position: absolute;
     top: -150px;
+    max-width: 960px;
   }
 
+  #parceiros {
+    background-image: none;
+  }
+  #parceiros-card {
+    position: absolute;
+    top: 181px;
+    left: 18%;
+
+    background-image: none;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-left: 12px;
+  }
   /* section-ultimos-episodios */
 
   #section-ultimos-episodios {
-    padding-bottom: 500px !important;
+    padding-bottom: 480px !important;
   }
   /* section-form-email */
 
@@ -184,16 +229,6 @@ textarea {
   .translate-form-position {
     transform: translateY(-400px);
   }
-
-  /* #section-form-email {
-    padding-top: 400px;
-    padding-bottom: 400px;
-    background-image: url("imgs/cardForm.png");
-    background-repeat: no-repeat;
-    background-size: 60% 100%;
-    background-position-x: center;
-    background-position-y: bottom;
-  } */
 }
 @media (min-width: 994px) {
   #form-container {
@@ -205,13 +240,18 @@ textarea {
     padding-top: 0;
     padding-bottom: 0;
   }
+
+  #parceiros-card {
+    top: 161px;
+    left: 14%;
+  }
 }
 
 @media (min-width: 1050px) {
   .splide-destroyed-flex {
     display: flex !important;
-    justify-content: center !important;
     gap: 60px !important;
+    justify-content:center!important;
   }
 
   #form-container {
@@ -222,6 +262,11 @@ textarea {
     background-image: none;
     padding-top: 0;
     padding-bottom: 0;
+  }
+
+  #parceiros-card {
+    top: 161px;
+    left: 25%;
   }
 }
 
@@ -234,5 +279,52 @@ textarea {
     background-image: none;
     padding-top: 0;
     padding-bottom: 0;
+  }
+
+  #parceiros-card {
+    top: 170px;
+    left: 8%;
+  }
+}
+@media (min-width: 1300px) {
+  #parceiros-card {
+    top: 170px;
+    left: 16%;
+  }
+}
+@media (min-width: 1400px) {
+  .cards-episodios {
+    position: absolute;
+    top: -150px;
+    max-width: none;
+  }
+  #parceiros-card {
+    top: 170px;
+    left: 18%;
+  }
+}
+@media (min-width: 1500px) {
+  #parceiros-card {
+    top: 170px;
+    left: 22%;
+  }
+}
+@media (min-width: 1550px) {
+  #parceiros {
+    background-image: url("imgs/cartao\ separado-edit.png");
+    background-repeat: no-repeat;
+    background-size: 98% 75%;
+    background-position-x: center;
+    background-position-y: center;
+  }
+  #parceiros-img-container {
+    display: none !important;
+  }
+  #parceiros-card {
+    position:static;
+
+    margin-bottom: 70px;
+    margin-top: -52px;
+    padding-left: 32px;
   }
 }
