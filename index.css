@@ -12,6 +12,7 @@
 /* configs padrao */
 body {
   font-family: "Bebas Neue", cursive;
+  background-color: var(--roxo-escuro);
 }
 
 h1,
@@ -149,11 +150,11 @@ textarea {
 .underline-link:hover {
   text-decoration: underline;
 }
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   border-color: var(--verde-radiotivo) !important;
   box-shadow: 0 0 0 0.25rem var(--verde-radiotivo-focus) !important;
 }
-
 
 /* Just Validate */
 .just-validate-error-field {
