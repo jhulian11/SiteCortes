@@ -1,4 +1,4 @@
-const splideConfig = function () {
+export const splideConfig = function () {
   const splideEquipeOptions = {
     start: 1,
     perPage: 1,
@@ -24,19 +24,29 @@ const splideConfig = function () {
   const splideParceirosOptions = {
     start: 0,
     perPage: 1,
-    focus: "start",
+    focus: "center",
     trimSpace: false,
     arrows: false,
     pagination: false,
     autoWidth: true,
     gap: "3rem",
-  
+    breakpoints: {
+      mediaQuery: "min",
+      1000: {
+        destroy: false,
+      },
+      4000: {
+        destroy: true,
+      },
+    },
   };
 
   const splideEquipe = new Splide(`#splide-equipe`, splideEquipeOptions);
-  const splideParceiros = new Splide(`#splide-parceiros`, splideParceirosOptions);
+  const splideParceiros = new Splide(
+    `#splide-parceiros`,
+    splideParceirosOptions
+  );
   splideEquipe.mount();
   splideParceiros.mount();
 };
 
-splideConfig();

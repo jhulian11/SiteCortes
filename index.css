@@ -1,5 +1,6 @@
 :root {
   --verde-radiotivo: #2cd524;
+  --verde-radiotivo-focus: #2dd52448;
   --verde-radiotivo-escuro: #1b5518;
   --roxo-escuro: #15052c;
   --cinza-claro: #d9d9d9;
@@ -101,7 +102,7 @@ textarea {
 #parceiros {
   background-image: url("imgs/cartao\ separado-edit.png");
   background-repeat: no-repeat;
-  background-size: 98% 75%;
+  background-size: 90% 75%;
   background-position-x: center;
   background-position-y: center;
   padding-top: 120px;
@@ -132,6 +133,12 @@ textarea {
   padding-bottom: 100px;
 }
 
+#parceiros-card {
+  margin-bottom: 80px;
+  margin-top: -52px;
+  padding-left: 22px;
+}
+
 /* utilidades */
 .icon-hover-radiotivo:hover {
   color: var(--verde-radiotivo) !important;
@@ -139,16 +146,36 @@ textarea {
 .card-fundo-amarelo-claro {
   background: var(--amarelo-claro);
 }
-
 .underline-link:hover {
   text-decoration: underline;
 }
-
-#parceiros-card {
-  margin-bottom: 80px;
-  margin-top: -52px;
-  padding-left: 22px;
+input:focus, textarea:focus {
+  border-color: var(--verde-radiotivo) !important;
+  box-shadow: 0 0 0 0.25rem var(--verde-radiotivo-focus) !important;
 }
+
+
+/* Just Validate */
+.just-validate-error-field {
+  background-position: right calc(0.375em + 0.1875rem) center;
+  background-repeat: no-repeat;
+  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+
+.just-validate-error-field {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23B81111'%3E%3Ccircle cx='6' cy='6' r='4.5'/%3E%3Cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3E%3Ccircle cx='6' cy='8.2' r='.6' fill='%23B81111' stroke='none'/%3E%3C/svg%3E");
+  border-color: red;
+}
+
+.just-validate-error-no-icon {
+  background-image: none !important;
+}
+
+.just-validate-error-field:focus {
+  border-color: red !important;
+  box-shadow: 0 0 0 0.25rem #dc354540 !important;
+}
+
 /* Breakpoints */
 
 @media (min-width: 700px) {
@@ -205,6 +232,9 @@ textarea {
     margin-top: 0;
     padding-left: 12px;
   }
+  .just-validate-error-label {
+    display: none;
+  }
   /* section-ultimos-episodios */
 
   #section-ultimos-episodios {
@@ -243,7 +273,7 @@ textarea {
 
   #parceiros-card {
     top: 161px;
-    left: 14%;
+    left: 16%;
   }
 }
 
@@ -251,7 +281,7 @@ textarea {
   .splide-destroyed-flex {
     display: flex !important;
     gap: 60px !important;
-    justify-content:center!important;
+    justify-content: center !important;
   }
 
   #form-container {
@@ -289,7 +319,7 @@ textarea {
 @media (min-width: 1300px) {
   #parceiros-card {
     top: 170px;
-    left: 16%;
+    left: 12%;
   }
 }
 @media (min-width: 1400px) {
@@ -300,7 +330,7 @@ textarea {
   }
   #parceiros-card {
     top: 170px;
-    left: 18%;
+    left: 20%;
   }
 }
 @media (min-width: 1500px) {
@@ -316,15 +346,19 @@ textarea {
     background-size: 98% 75%;
     background-position-x: center;
     background-position-y: center;
+
+    margin-top: 60px;
   }
   #parceiros-img-container {
     display: none !important;
   }
   #parceiros-card {
-    position:static;
+    position: static;
 
     margin-bottom: 70px;
     margin-top: -52px;
     padding-left: 32px;
+    top: 170px;
+    left: 22%;
   }
 }
