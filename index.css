@@ -363,3 +363,6 @@ textarea:focus {
     left: 22%;
   }
 }
+.list-unstyled {
+  z-index: 10;
+}
