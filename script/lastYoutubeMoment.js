@@ -1,57 +1,59 @@
 //https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&order=date&q=[YOUR_QUERY]&type=video&key=[YOUR_API_KEY]
 
-let id;
-const arrayYoutube = [];
-console.log("array 1:", arrayYoutube);
+let idDois;
+const arrayYoutube2 = [];
+console.log("array 1:", arrayYoutube2);
 
-const response = async () => {
+const responseDois = async () => {
   for (var i = 0; i < 4; i++) {
     if (i == 0) {
-      id = "_ptEa2GKoqg";
-      const url = "https://www.youtube.com/watch?v=" + id;
+      idDois = "_ptEa2GKoqg";
+      const url = "https://www.youtube.com/watch?v=" + idDois;
 
       const responseData = await fetch(
         `https://noembed.com/embed?url=${url}&format=json`
       );
       const responseJson = await responseData.json();
-      arrayYoutube.push(responseJson);
+      arrayYoutube2.push(responseJson);
     }
     if (i == 1) {
-      id = "PHqgVuuBN2A";
-      const url = "https://www.youtube.com/watch?v=" + id;
+      idDois = "PHqgVuuBN2A";
+      const url = "https://www.youtube.com/watch?v=" + idDois;
 
       const responseData = await fetch(
         `https://noembed.com/embed?url=${url}&format=json`
       );
       const responseJson = await responseData.json();
-      arrayYoutube.push(responseJson);
+      arrayYoutube2.push(responseJson);
     }
     if (i == 2) {
-      id = "_5aEUer0qKc";
-      const url = "https://www.youtube.com/watch?v=" + id;
+      idDois = "_5aEUer0qKc";
+      const url = "https://www.youtube.com/watch?v=" + idDois;
 
       const responseData = await fetch(
         `https://noembed.com/embed?url=${url}&format=json`
       );
       const responseJson = await responseData.json();
-      arrayYoutube.push(responseJson);
+      arrayYoutube2.push(responseJson);
     }
 
     if (i == 3) {
-      id = "65ROf_n7Opw";
-      const url = "https://www.youtube.com/watch?v=" + id;
+      idDois = "65ROf_n7Opw";
+      const url = "https://www.youtube.com/watch?v=" + idDois;
 
       const responseData = await fetch(
         `https://noembed.com/embed?url=${url}&format=json`
       );
       const responseJson = await responseData.json();
-      arrayYoutube.push(responseJson);
+      arrayYoutube2.push(responseJson);
     }
   }
   for (let i = 0; i < 4; i++) {
-    const arrayOne = arrayYoutube[i];
-    console.log(arrayOne);
-    const imgArrayOne = document.getElementById(`ultimos-youtube-eps-${i + 1}`);
+    const arrayDois = arrayYoutube2[i];
+    console.log(arrayDois);
+    const imgarrayDois = document.getElementById(
+      `ultimos-youtube-eps-${i + 1}`
+    );
 
     function limitarCaracteres(texto, limite) {
       if (texto.length > limite) {
@@ -60,25 +62,25 @@ const response = async () => {
       return texto;
     }
     //coloquei por enquanto, mas depois tem que alterar o bootstrap
-    let testeLol = limitarCaracteres(arrayOne.title, 35);
-    imgArrayOne.innerHTML = `
+    let testeLol = limitarCaracteres(arrayDois.title, 35);
+    imgarrayDois.innerHTML = `
 
    
     <div class="position-relative">
       <img
-        src="${arrayOne.thumbnail_url}"
+        src="${arrayDois.thumbnail_url}"
         class="img-fluid rounded-5"
         width="250px"
         alt=""
       />
-      <a href="${arrayOne.url}" class="icon-play stretched-link">
+      <a href="${arrayDois.url}" class="icon-play stretched-link">
         <i
           class="bi bi-play-circle-fill fs-3 position-absolute top-50 start-50 translate-middle"
         ></i
       ></a>
     </div>
     <small class="mt-2 ms-3 d-block text-white fs-7"
-      >${arrayOne.title}</small
+      >${arrayDois.title}</small
     >
 
     
@@ -86,4 +88,4 @@ const response = async () => {
     `;
   }
 };
-response();
+responseDois();
