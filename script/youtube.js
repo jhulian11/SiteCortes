@@ -41,6 +41,15 @@ const response = async () => {
     const arrayOne = arrayYoutube[i];
     console.log(arrayOne);
     const imgArrayOne = document.getElementById(`add-img-${i + 1}`);
+
+    function limitarCaracteres(texto, limite) {
+      if (texto.length > limite) {
+        texto = texto.substring(0, limite);
+      }
+      return texto;
+    }
+    //coloquei por enquanto, mas depois tem que alterar o bootstrap
+    let testeLol = limitarCaracteres(arrayOne.title, 35);
     imgArrayOne.innerHTML = `
 
     <div
@@ -61,7 +70,7 @@ const response = async () => {
         </div>
         <div class="col-7 ps-0">
           <div class="card-body">
-            <h5 class="card-title">${arrayOne.title}</h5>
+            <h5 class="card-title">${testeLol}</h5>
       
             <a
               href="${arrayOne.url}"
